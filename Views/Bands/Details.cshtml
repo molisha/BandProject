@@ -1,0 +1,53 @@
+﻿
+@model BANDS.Models.ViewModel.BandViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Bands Details</h1>
+
+<h2>Band:@Model.Band.Name</h2>
+<li> <b>Country: </b>  @Model.Band.Country</li>
+<li> <b>Genre:</b>     @Model.Band.Genre</li>
+<li><b> EstablishedDAte:</b>   @Model.Band.EstDAte</li>
+<li><b>Active:</b>            @Model.Band.Active</li>
+
+<br />
+
+
+
+
+<br />
+
+
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       
+        @{
+            int i = 1;
+        }
+        @foreach (var member in Model.Member)
+        {
+        <tr>
+            <td>@i@{i += 1;}</td>
+            <td>@member.Name</td>
+            
+            <td>@member.Role</td>
+            
+
+        </tr>
+        }
+    </tbody>
+</table>

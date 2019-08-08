@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BANDS.Models.Band>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>SN</th>
+            <th>Name</th>
+            <th>Member</th>
+            <th>Action</th>
+
+
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var bands in Model)
+        {
+            <tr>
+                <td>@i@{i += 1;}</td>
+                <td>@Html.ActionLink(bands.Name, "Details", "Bands", new { id = bands.Id }, null)</td>
+                <td> </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Bands", new { id = bands.Id }, new { @class = "btn btn-primary" })
+
+                    @Html.ActionLink("Delete", "Delete", "Bands", new { id = bands.Id }, new { @class = "btn btn-danger", onclick = "return confirm('Are sure wants to delete?');" })
+                </td>
+            </tr>
+      
+         }
+    </tbody>
+
+
+</table>
+
+   

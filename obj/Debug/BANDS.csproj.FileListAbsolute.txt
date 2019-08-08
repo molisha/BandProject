@@ -48,6 +48,10 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\roslyn\vbc.rsp
 C:\Users\Rajbhandari\source\repos\BANDS\bin\roslyn\VBCSCompiler.exe
 C:\Users\Rajbhandari\source\repos\BANDS\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Antlr3.Runtime.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.SqlServer.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Newtonsoft.Json.dll
@@ -59,6 +63,10 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.WebPages.Deployment.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.WebPages.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.WebPages.Razor.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\WebGrease.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.xml
+C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.SqlServer.xml
+C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Helpers.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Mvc.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Optimization.xml
@@ -69,7 +77,11 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.WebPages.Razor.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Newtonsoft.Json.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Antlr3.Runtime.pdb
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.InitialModel.resources
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.AddingBandId.resources
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.GenerateResource.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CoreCompileInputs.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CopyComplete
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.dll
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.pdb
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csprojAssemblyReference.cache

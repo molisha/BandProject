@@ -1,0 +1,29 @@
+﻿@model BANDS.Models.ViewModel.BandViewModel
+@{
+    ViewBag.Title = "BandForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class= "text-warning">New BandsAndMember</h1>
+@using(Html.BeginForm("Save","Bands"))
+{
+   <div class="form-group">
+       @Html.LabelFor(m=>m.Band.Name)
+       @Html.TextBoxFor(m=>m.Band.Name,new { @class="form-control"})
+       @Html.ValidationMessageFor(m=>m.Band.Name)
+   </div>
+
+   <div class="form-group">
+     @Html.LabelFor(m=>m.Band.Member)
+     @Html.TextBox(mbox=>mbox.Band.Member, new { @class="form-contgrol"})
+    @Html.ValidationMesssageFor(m=>m.Band.Member)
+   </div>
+
+
+}
+
+
+
+
+
+
