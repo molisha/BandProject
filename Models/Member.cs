@@ -15,6 +15,6 @@ namespace BANDS.Models
 
         public Band Band{ get; set; }
 
-        public byte BandId { get; set; }
+        public int BandId { get; set; }
     }
 }

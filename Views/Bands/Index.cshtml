@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+@Html.ActionLink("Add Bands", "BandForm", "Bands", null, new { @class = "btn btn-primary" })
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -29,18 +29,18 @@
             <tr>
                 <td>@i@{i += 1;}</td>
                 <td>@Html.ActionLink(bands.Name, "Details", "Bands", new { id = bands.Id }, null)</td>
-                <td> </td>
+                <td>member.Name </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", "Bands", new { id = bands.Id }, new { @class = "btn btn-primary" })
 
                     @Html.ActionLink("Delete", "Delete", "Bands", new { id = bands.Id }, new { @class = "btn btn-danger", onclick = "return confirm('Are sure wants to delete?');" })
                 </td>
             </tr>
-      
-         }
+
+        }
     </tbody>
 
 
 </table>
 
-   
+

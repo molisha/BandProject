@@ -13,7 +13,7 @@ namespace BANDS.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201908061039002_InitialModel"; }
+            get { return "201908110555121_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

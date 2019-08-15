@@ -133,23 +133,32 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BandsController.cs" />
+    <Compile Include="Controllers\EventSchedulesController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908061039002_InitialModel.cs" />
-    <Compile Include="Migrations\201908061039002_InitialModel.Designer.cs">
-      <DependentUpon>201908061039002_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201908110555121_InitialModel.cs" />
+    <Compile Include="Migrations\201908110555121_InitialModel.Designer.cs">
+      <DependentUpon>201908110555121_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908070935544_AddingBandId.cs" />
-    <Compile Include="Migrations\201908070935544_AddingBandId.Designer.cs">
-      <DependentUpon>201908070935544_AddingBandId.cs</DependentUpon>
+    <Compile Include="Migrations\201908120610351_Fix Event.cs" />
+    <Compile Include="Migrations\201908120610351_Fix Event.Designer.cs">
+      <DependentUpon>201908120610351_Fix Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908141051172_AddingPhotoinBand.cs" />
+    <Compile Include="Migrations\201908141051172_AddingPhotoinBand.Designer.cs">
+      <DependentUpon>201908141051172_AddingPhotoinBand.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Band.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventSchedule.cs" />
     <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Models\ViewModel\BandViewModel.cs" />
+    <Compile Include="Models\ViewModel\EventViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1937,6 +1946,10 @@
     <Content Include="Views\Bands\Index.cshtml" />
     <Content Include="Views\Bands\Details.cshtml" />
     <Content Include="Views\Bands\BandForm.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\EventSchedules\Index.cshtml" />
+    <Content Include="Views\Events\EventDetails.cshtml" />
+    <Content Include="Views\Events\EventForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1951,11 +1964,14 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908061039002_InitialModel.resx">
-      <DependentUpon>201908061039002_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908110555121_InitialModel.resx">
+      <DependentUpon>201908110555121_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908070935544_AddingBandId.resx">
-      <DependentUpon>201908070935544_AddingBandId.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908120610351_Fix Event.resx">
+      <DependentUpon>201908120610351_Fix Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908141051172_AddingPhotoinBand.resx">
+      <DependentUpon>201908141051172_AddingPhotoinBand.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

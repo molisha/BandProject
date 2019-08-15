@@ -7,13 +7,13 @@ namespace BANDS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddingBandId : IMigrationMetadata
+    public sealed partial class AddingPhotoinBand : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingBandId));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddingPhotoinBand));
         
         string IMigrationMetadata.Id
         {
-            get { return "201908070935544_AddingBandId"; }
+            get { return "201908141051172_AddingPhotoinBand"; }
         }
         
         string IMigrationMetadata.Source

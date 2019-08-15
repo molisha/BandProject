@@ -78,10 +78,11 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\Newtonsoft.Json.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Antlr3.Runtime.pdb
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.InitialModel.resources
-C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.AddingBandId.resources
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.FixEvent.resources
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.GenerateResource.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CoreCompileInputs.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CopyComplete
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.dll
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.pdb
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csprojAssemblyReference.cache
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.AddingPhotoinBand.resources

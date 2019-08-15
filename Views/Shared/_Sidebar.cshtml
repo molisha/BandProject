@@ -40,31 +40,41 @@
                 <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
             </ul>*@
             
+        <li>
+            <a href="@Url.Action("Details", "Bands")" class="elements">
+                <i class="fa fa-files-o"></i>
+                <span>Members</span>
+                <span class="pull-right-container">
+                    <span class="label label-primary pull-right">4</span>
+                </span>
+            </a>
+
+        </li>
+
+
+
             
-                <a href="@Url.Action("Details", "Bands")" class="elements">
-                    <i class="fa fa-files-o"></i>
-                    <span>Members</span>
-                    <span class="pull-right-container">
-                        <span class="label label-primary pull-right">4</span>
-                    </span>
-                </a>
+        <li>
+            <a href="@Url.Action("Index", "Events")" class="elements">
+                <i class="fa fa-calendar"></i> <span>Events</span>
+                <span class="pull-left">
 
-           
-
+                </span>
+            </a>
+        </li>
 
 
-            
             <li>
-                <a href="#">
-                    <i class="fa fa-calendar"></i> <span>Events</span>
+                <a href="@Url.Action("Index", "EventSchedules")" class="elements">
+                    <i class="fa fa-calendar"></i> <span>EventSchedules</span>
                     <span class="pull-left">
-                        
+
                     </span>
-                </a>
-            </li>
-            <li>
-                
-            </li>
+                </a>  
+
+
+            </li>       
+            </ul>
             
 
 

@@ -1,0 +1,44 @@
+﻿@model BANDS.Models.ViewModel.EventViewModel
+
+    @{
+        ViewBag.Title = "EventDetails";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>@Model.Event.EventTitle</h2>
+
+<li><b>Venue:</b> @Model.Event.Venue</li>
+<li>  <b>Event Details:</b>   @Model.Event.EventDetail</li>
+
+<br/>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>SN</th>
+                <th>Time</th>
+                <th>BandName</th>
+                <th>Song</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                int i = 1;
+            }
+
+            @foreach (var ev in Model.EventSchedule)
+            {
+                <tr>
+                    <td>@i@{i += 1;}</td>
+                    <td>@ev.Time</td>
+                    <td>@ev.Band.Name</td>
+
+                    <td>@ev.Song</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+

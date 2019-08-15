@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BANDS.Models.EventSchedule>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1 class="text-success">EventSchedule</h1>
+
+<table id="event" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+
+
+            <th>Time</th>
+            <th>EventName</th>
+            <th>BandNames</th>
+            <th>SongTitle</th>
+
+
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var es in Model)
+        {
+        <tr>
+
+
+            <td>@es.Time</td>
+           
+            <td>@es.Event.EventTitle</td>
+            <td>@es.Band.Name</td>
+            <td>@es.Song</td>
+            
+            
+        </tr>
+        }
+    </tbody>
+  
+</table>

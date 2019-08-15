@@ -1,28 +1,77 @@
-﻿@model BANDS.Models.ViewModel.BandViewModel
+﻿
+
+@model BANDS.Models.Band
 @{
     ViewBag.Title = "BandForm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class= "text-warning">New BandsAndMember</h1>
-@using(Html.BeginForm("Save","Bands"))
+<h1 class="text-warning">New Bands</h1>
+
+
+@using (Html.BeginForm("Save", "Bands"))
 {
-   <div class="form-group">
-       @Html.LabelFor(m=>m.Band.Name)
-       @Html.TextBoxFor(m=>m.Band.Name,new { @class="form-control"})
-       @Html.ValidationMessageFor(m=>m.Band.Name)
-   </div>
+    <section class="content">
+        <div class="row">
+            <!-- left column -->
+            <!-- right column -->
+            <div class="col-md-12">
+                <!-- Horizontal Form -->
+                <!-- /.box -->
+                <!-- general form elements disabled -->
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">BandsForm</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="form-group col-xs-4">
 
-   <div class="form-group">
-     @Html.LabelFor(m=>m.Band.Member)
-     @Html.TextBox(mbox=>mbox.Band.Member, new { @class="form-contgrol"})
-    @Html.ValidationMesssageFor(m=>m.Band.Member)
-   </div>
+                            @Html.LabelFor(b => b.Name)
+                            @Html.TextBoxFor(b => b.Name, new { @class = "form-control" })
 
 
+
+                            @Html.LabelFor(b => b.Country)
+                            @Html.TextBoxFor(b => b.Country, new { @class = "form-control" })
+
+
+
+                            @Html.LabelFor(b => b.Genre)
+                            @Html.TextBoxFor(b => b.Genre, new { @class = "form-control" })
+
+                            @Html.LabelFor(b => b.EstDAte)
+                            @Html.TextBoxFor(b => b.EstDAte, new { @class = "form-control" })
+
+                            @Html.LabelFor(b => b.Photo)
+                            @Html.TextBoxFor(b => b.Photo, new { @class = "form-control" })
+
+
+
+                            @*<form action="/action_page.php">
+                   Select image: <input type="file" name="" multiple>MY Photo<br><br>
+                    <input type="submit">
+                   </form>*@
+
+                            
+
+                            <div class="checkbox">
+                                <label>@Html.CheckBoxFor(b => b.Active) Active</label>
+                            </div>
+
+                            @Html.HiddenFor(b => b.Id)
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </section>
 }
-
-
 
 
 

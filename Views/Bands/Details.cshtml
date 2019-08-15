@@ -6,9 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Bands Details</h1>
+<h1><u>Bands Details </u></h1>
 
-<h2>Band:@Model.Band.Name</h2>
+<h2><u>Band:@Model.Band.Name</u></h2>
 <li> <b>Country: </b>  @Model.Band.Country</li>
 <li> <b>Genre:</b>     @Model.Band.Genre</li>
 <li><b> EstablishedDAte:</b>   @Model.Band.EstDAte</li>
@@ -30,24 +30,56 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Role</th>
-            
+
         </tr>
     </thead>
     <tbody>
-       
+
         @{
             int i = 1;
         }
-        @foreach (var member in Model.Member)
+        @foreach (var member in Model.Members)
         {
-        <tr>
-            <td>@i@{i += 1;}</td>
-            <td>@member.Name</td>
-            
-            <td>@member.Role</td>
-            
+            <tr>
+                <td>@i@{i += 1;}</td>
+                <td>@member.Name</td>
 
-        </tr>
+                <td>@member.Role</td>
+
+
+            </tr>
         }
     </tbody>
 </table>
+
+<h3><u>EventsPerformed</u></h3>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>EventTitle</th>
+           
+            <th>Venue</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            int j = 1;
+        }
+
+        @foreach (var ev in Model.Events)
+        {
+            <tr>
+                <td>@j@{j += 1;}</td>
+                <td>@ev.EventTitle</td>
+                <td>@ev.Venue</td>
+
+               
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

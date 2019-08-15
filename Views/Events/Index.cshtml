@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BANDS.Models.Event>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1 class="text-success">Events</h1>
+
+<table id="event" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>DatessTime</th>
+            <th>Event Detail</th>
+            <th>Event Title</th>
+            <th>Venue</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var events in Model)
+        {
+        <tr>
+            <td></td>
+
+            <td>@events.DateTime</td>
+            <td>@events.EventDetail</td>
+            
+            @*<td>@events.EventTitle</td>*@
+            <td>@Html.ActionLink(events.EventTitle, "EventDetails", "Events", new { id = events.Id }, null)</td>
+            <td>@events.Venue</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+

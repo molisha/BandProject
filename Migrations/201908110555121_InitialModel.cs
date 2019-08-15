@@ -11,14 +11,43 @@ namespace BANDS.Migrations
                 "dbo.Bands",
                 c => new
                     {
-                        Id = c.Byte(nullable: false),
+                        Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Genre = c.String(),
                         Country = c.String(),
-                        EstDAte = c.DateTime(nullable: false),
+                        EstDAte = c.DateTime(),
                         Active = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Events",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        DateTime = c.DateTime(),
+                        EventDetail = c.String(),
+                        EventTitle = c.String(),
+                        Venue = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.EventSchedules",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Date = c.DateTime(),
+                        Time = c.Time(nullable: false, precision: 7),
+                        BandId = c.Int(nullable: false),
+                        EventId = c.Int(nullable: false),
+                        Song = c.String(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Bands", t => t.BandId, cascadeDelete: true)
+                .ForeignKey("dbo.Events", t => t.EventId, cascadeDelete: true)
+                .Index(t => t.BandId)
+                .Index(t => t.EventId);
             
             CreateTable(
                 "dbo.Members",
@@ -27,11 +56,11 @@ namespace BANDS.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Role = c.String(),
-                        Band_Id = c.Byte(),
+                        BandId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Bands", t => t.Band_Id)
-                .Index(t => t.Band_Id);
+                .ForeignKey("dbo.Bands", t => t.BandId, cascadeDelete: true)
+                .Index(t => t.BandId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -109,20 +138,26 @@ namespace BANDS.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.Members", "Band_Id", "dbo.Bands");
+            DropForeignKey("dbo.Members", "BandId", "dbo.Bands");
+            DropForeignKey("dbo.EventSchedules", "EventId", "dbo.Events");
+            DropForeignKey("dbo.EventSchedules", "BandId", "dbo.Bands");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.Members", new[] { "Band_Id" });
+            DropIndex("dbo.Members", new[] { "BandId" });
+            DropIndex("dbo.EventSchedules", new[] { "EventId" });
+            DropIndex("dbo.EventSchedules", new[] { "BandId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.Members");
+            DropTable("dbo.EventSchedules");
+            DropTable("dbo.Events");
             DropTable("dbo.Bands");
         }
     }

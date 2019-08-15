@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -19,6 +20,10 @@ namespace BANDS.Models
         {
             public DbSet<Band> Bands { get; set; }
             public DbSet<Member> Members { get; set; }
+
+            public DbSet<Event> Events { get;set; }
+            public DbSet<EventSchedule> EventSchedules{ get; set; }
+             
             public ApplicationDbContext()
                 : base("DefaultConnections", throwIfV1Schema: false)
             {
@@ -37,6 +42,16 @@ namespace BANDS.Models
                     return userIdentity;
                 }
             }
+
+            //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+            //{
+            //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            //    modelBuilder.Entity<EventSchedule>()
+            //        .Map(t => t.("BandId")
+                       
+            //            .ToTable("Band"));
+            //}
         }
 
     }

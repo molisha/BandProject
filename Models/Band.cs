@@ -8,7 +8,7 @@ namespace BANDS.Models
 {
     public class Band
     {
-        public byte Id { get; set; }
+        public int Id { get; set; }
 
         public String Name { get; set; }
 
@@ -21,6 +21,7 @@ namespace BANDS.Models
         public DateTime? EstDAte { get; set; }
 
         public bool Active { get; set; }
+       public  String Photo { get; set; }
 
     }
 }
