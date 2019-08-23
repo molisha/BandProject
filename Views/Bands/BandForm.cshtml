@@ -9,7 +9,7 @@
 <h1 class="text-warning">New Bands</h1>
 
 
-@using (Html.BeginForm("Save", "Bands"))
+@using (Html.BeginForm("Save", "Bands", FormMethod.Post, new { enctype="multipart/form-data"}))
 {
     <section class="content">
         <div class="row">
@@ -43,17 +43,11 @@
                             @Html.LabelFor(b => b.EstDAte)
                             @Html.TextBoxFor(b => b.EstDAte, new { @class = "form-control" })
 
-                            @Html.LabelFor(b => b.Photo)
-                            @Html.TextBoxFor(b => b.Photo, new { @class = "form-control" })
-
-
-
-                            @*<form action="/action_page.php">
-                   Select image: <input type="file" name="" multiple>MY Photo<br><br>
-                    <input type="submit">
-                   </form>*@
-
                             
+
+                            <input type="file" name="ImageFile" readonly />
+
+
 
                             <div class="checkbox">
                                 <label>@Html.CheckBoxFor(b => b.Active) Active</label>

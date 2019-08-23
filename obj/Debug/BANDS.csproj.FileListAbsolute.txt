@@ -55,6 +55,8 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.EntityFram
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Newtonsoft.Json.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\PagedList.dll
+C:\Users\Rajbhandari\source\repos\BANDS\bin\PagedList.Mvc.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Helpers.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Mvc.dll
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Optimization.dll
@@ -67,6 +69,8 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\EntityFramework.SqlServer.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Rajbhandari\source\repos\BANDS\bin\PagedList.xml
+C:\Users\Rajbhandari\source\repos\BANDS\bin\PagedList.Mvc.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Helpers.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Mvc.xml
 C:\Users\Rajbhandari\source\repos\BANDS\bin\System.Web.Optimization.xml
@@ -79,10 +83,10 @@ C:\Users\Rajbhandari\source\repos\BANDS\bin\Antlr3.Runtime.pdb
 C:\Users\Rajbhandari\source\repos\BANDS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.InitialModel.resources
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.FixEvent.resources
+C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.AddingPhotoinBand.resources
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.GenerateResource.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CoreCompileInputs.cache
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csproj.CopyComplete
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.dll
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.pdb
 C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.csprojAssemblyReference.cache
-C:\Users\Rajbhandari\source\repos\BANDS\obj\Debug\BANDS.Migrations.AddingPhotoinBand.resources

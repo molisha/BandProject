@@ -1,0 +1,60 @@
+﻿@model IEnumerable<BANDS.Models.EventSchedule>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search</h2>
+
+@using (Html.BeginForm("Search", "EventSchedules", FormMethod.Get))
+{
+    
+    @Html.TextBox("searchs")<input type="submit" value="Search" />
+   
+    <input type="submit" value="submit"/>
+    <div class="col-xs-3">
+
+
+        @Html.DropDownList("EventSchedules",new List<SelectListItem>
+    {
+    new SelectListItem{ Text ="BandName",Value="BandName"},
+    new SelectListItem{ Text ="EventTitle",Value="EventTitle"},
+    new SelectListItem{ Text ="Venue",Value="Venue"}
+    },"Select Item",new{ @Name="search",@class="form-control"})
+   
+</div>
+} else()
+
+<table id="event" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+
+
+                <th>Time</th>
+                <th>EventTitle</th>
+                <th>BandNames</th>
+                <th>SongTitle</th>
+                <th>Venue</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var es in Model)
+            {
+            <tr>
+
+
+                <td>@es.Time</td>
+
+                <td>@es.Event.EventTitle</td>
+                <td>@es.Band.Name</td>
+                <td>@es.Song</td>
+                <td>@es.Event.Venue</td>
+
+            </tr>
+            }
+        </tbody>
+
+    </table>

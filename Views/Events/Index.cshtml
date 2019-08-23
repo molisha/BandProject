@@ -7,6 +7,10 @@
 
 
 <h1 class="text-success">Events</h1>
+@using (Html.BeginForm("Index","Events",FormMethod.Get))
+{
+    @Html.TextBox("Search") <input type="submit" value="Search"/><br/>
+}
 
 <table id="event" class="table table-bordered table-hover">
     <thead>

@@ -8,12 +8,17 @@
 
 <h1><u>Bands Details </u></h1>
 
-<h2><u>Band:@Model.Band.Name</u></h2>
-<li> <b>Country: </b>  @Model.Band.Country</li>
-<li> <b>Genre:</b>     @Model.Band.Genre</li>
-<li><b> EstablishedDAte:</b>   @Model.Band.EstDAte</li>
-<li><b>Active:</b>            @Model.Band.Active</li>
+    <h2><u>Band:@Model.Band.Name</u></h2>
+    <li> <b>Country: </b>  @Model.Band.Country</li>
+    <li> <b>Genre:</b>     @Model.Band.Genre</li>
+    <li><b> EstablishedDAte:</b>   @Model.Band.EstDAte</li>
+    <li><b>Active:</b>            @Model.Band.Active</li>
+    @*<img src="/Photo/@Model.Band.Photo" alt="" />*@
 
+<div class="col-xs-offset-3">
+
+<img class="img-rounded" src="/Photo/@Model.Band.Photo" height="255" width="450" alt="not found">
+</div>
 <br />
 
 
@@ -58,7 +63,7 @@
         <tr>
             <th>Id</th>
             <th>EventTitle</th>
-           
+
             <th>Venue</th>
         </tr>
     </thead>
@@ -75,7 +80,7 @@
                 <td>@ev.EventTitle</td>
                 <td>@ev.Venue</td>
 
-               
+
 
 
             </tr>

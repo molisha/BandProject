@@ -32,12 +32,19 @@ namespace BANDS.Controllers
         // GET: Events
 
 
-        public ActionResult Index()
+        public ActionResult Index(String search)
         {
+            {
+               
+                    var events=_context.Events.Where(x => x.Venue.StartsWith(search) || search == null || x.EventTitle.StartsWith(search)).ToList(); 
+                
+                    
 
-            var events = _context.Events.ToList();
+                return View(events);
+            }
+            
 
-            return View(events);
+            
 
 
         }

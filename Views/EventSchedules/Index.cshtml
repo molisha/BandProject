@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BANDS.Models.EventSchedule>
+﻿@model BANDS.Models.ViewModel.EventScheduleViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,36 +7,45 @@
 
 <h1 class="text-success">EventSchedule</h1>
 
-<table id="event" class="table table-bordered table-hover">
-    <thead>
-        <tr>
+@using (Html.BeginForm("Index", "Bands", FormMethod.Get))
+{
+<div class="col-xs-3">
 
-
-            <th>Time</th>
-            <th>EventName</th>
-            <th>BandNames</th>
-            <th>SongTitle</th>
-
-
-            
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (var es in Model)
-        {
-        <tr>
-
-
-            <td>@es.Time</td>
-           
-            <td>@es.Event.EventTitle</td>
-            <td>@es.Band.Name</td>
-            <td>@es.Song</td>
-            
-            
-        </tr>
-        }
-    </tbody>
   
-</table>
+    @Html.DropDownListFor(b => b.BandId, new SelectList(Model.Band, "", "Name"), "Select Bands", new { @Name = "search", @class = "form-control" })
+    <input type="submit" value="Go" />
+    </div>
+}
+    <table id="event" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+
+
+                <th>Time</th>
+                <th>EventTitle</th>
+                <th>BandNames</th>
+                <th>SongTitle</th>
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var es in Model.EventSchedule)
+            {
+                <tr>
+
+
+                    <td>@es.Time</td>
+
+                    <td>@es.Event.EventTitle</td>
+                    <td>@es.Band.Name</td>
+                    <td>@es.Song</td>
+
+
+                </tr>
+            }
+        </tbody>
+
+    </table>

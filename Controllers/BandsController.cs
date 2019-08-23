@@ -7,6 +7,8 @@ using System.Data.Entity;
 using static BANDS.Models.IdentityModel;
 using BANDS.Models.ViewModel;
 using BANDS.Models;
+using System.IO;
+using PagedList;
 
 namespace BANDS.Controllers
 {
@@ -30,12 +32,14 @@ namespace BANDS.Controllers
 
         
         // GET: Band
-        public ActionResult Index()
+        public ActionResult Index(String search,int ? pageNumber)
         {
-            var bands = _context.Bands.ToList();
-            return View(bands);
+            //pagelist code 
+            var band = _context.Bands.OrderBy(b=>b.Name).Where(x => x.Name.StartsWith(search) || search== null).ToList().ToPagedList(pageNumber ?? 1, 4);
 
 
+            return View(band);
+            
         }
 
 
@@ -95,9 +99,12 @@ namespace BANDS.Controllers
 
         }
 
+
         public ActionResult Delete(int id)
         {
             var band=_context.Bands.SingleOrDefault(b=>b.Id == id);
+
+            
             _context.Bands.Remove(band);
             _context.SaveChanges();
             
@@ -107,28 +114,63 @@ namespace BANDS.Controllers
 
         public ActionResult Save(Band band)
 
-        {
-            if(band.Id == 0)
-           {
+        {      
+            if (band.Id == 0)
+            {
+
+
                 var id = _context.Bands.Max(b => b.Id);
                 band.Id = ++id;
                 _context.Bands.Add(band);
-                
+
+                //photo add garna in Photo folder
+                string filename = Path.GetFileNameWithoutExtension(band.ImageFile.FileName);
+                string extension = Path.GetExtension(band.ImageFile.FileName);
+                filename = filename + extension;
+                filename = Path.Combine(Server.MapPath("~/Photo/"), filename);
+                band.ImageFile.SaveAs(filename);
+                band.Photo = band.ImageFile.FileName;
             }
+
+
             else
             {
+
+
                 var bandDb = _context.Bands.FirstOrDefault(b => b.Id == band.Id);
                 bandDb.Name = band.Name;
                 bandDb.Country = band.Country;
                 bandDb.Genre = band.Genre;
                 bandDb.EstDAte = band.EstDAte;
-                bandDb.Photo = band.Photo;
-            }
 
+               
+                //Photo delete garna when delete from folder Photo
+                string filename = Path.GetFileNameWithoutExtension(band.ImageFile.FileName);
+                string extension = Path.GetExtension(band.ImageFile.FileName);
+
+                filename = filename + extension;
+
+                string filePath = Server.MapPath("~/Photo/ ") + bandDb.Photo;
+                if (System.IO.File.Exists(filePath))
+
+                {
+                    System.IO.File.Delete(filePath);
+                }
+
+                //edit garda save 
+                filename = Path.Combine(Server.MapPath("~/Photo/"), filename);
+                band.ImageFile.SaveAs(filename);
+                band.Photo = band.ImageFile.FileName;
+                bandDb.Photo = band.Photo;
+
+
+                
+            }
             _context.SaveChanges();
             return RedirectToAction("Index","Bands");
         }
 
+   
     }
 }
 
